@@ -1,0 +1,98 @@
+import React, { useState, useEffect } from 'react';
+import { Link, NavLink } from 'react-router-dom';
+import './Navbar.css';
+
+function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  // Updated Contact Numbers for RiM AUTO PARTS
+  const phoneNumber1 = '7009564900';
+  const whatsappNumber = '917009564900';
+  const whatsappMessage = encodeURIComponent("Hello RiM AUTO PARTS, I'm interested in your auto parts products. I'd like to know more about your brake pads, clutch plates, air filters, and bulk pricing.");
+  const whatsappLink = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+  const toggleMenu = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeMenu = () => {
+    setIsOpen(false);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  useEffect(() => {
+    if (isOpen) {
+      document.body.classList.add('menu-open');
+    } else {
+      document.body.classList.remove('menu-open');
+    }
+    return () => {
+      document.body.classList.remove('menu-open');
+    };
+  }, [isOpen]);
+
+  return (
+    <nav className={`navbar ${isScrolled ? 'scrolled' : ''}`}>
+      <div className="nav-container">
+        <Link to="/" className="logo" onClick={closeMenu}>
+
+          <div className="logo-text">
+            <span className="logo-main">RiM</span>
+            <span className="logo-sub">AUTO PARTS</span>
+          </div>
+        </Link>
+        
+        <button 
+          className={`menu-toggle ${isOpen ? 'active' : ''}`} 
+          onClick={toggleMenu}
+          aria-label="Toggle menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        
+        <ul className={`nav-links ${isOpen ? 'mobile-open' : ''}`}>
+          <li><NavLink to="/" onClick={closeMenu} end>Home</NavLink></li>
+          <li><NavLink to="/about" onClick={closeMenu}>About</NavLink></li>
+          <li><NavLink to="/products" onClick={closeMenu}>Products</NavLink></li>
+          <li><NavLink to="/catalog" onClick={closeMenu}>Catalog</NavLink></li>
+          <li><NavLink to="/reviews" onClick={closeMenu}>Reviews</NavLink></li>
+          <li><NavLink to="/contact" onClick={closeMenu}>Contact</NavLink></li>
+          <li className="mobile-contact">
+            <a href={`tel:${phoneNumber1}`} className="mobile-phone-btn">
+              📞 {phoneNumber1} 
+            </a>
+            <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="mobile-wa-btn">
+              💬 WhatsApp
+            </a>
+          </li>
+        </ul>
+        
+        <div className="nav-contact">
+          <a href={`tel:${phoneNumber1}`} className="phone-btn">
+            📞 {phoneNumber1}
+          </a>
+          <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="wa-btn" aria-label="WhatsApp">
+            💬
+          </a>
+        </div>
+      </div>
+    </nav>
+  );
+}
+
+export default Navbar;

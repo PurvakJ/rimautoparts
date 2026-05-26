@@ -1,0 +1,384 @@
+/* RIM AUTO PARTS - Footer Styles */
+/* Color Scheme: Deep Teal (#3c5f77) & Warm Beige (#c0bbaf) */
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+.footer {
+    background: linear-gradient(135deg, var(--rim-navy) 0%, #0F1E2A 100%);
+    color: var(--rim-cream);
+    font-family: 'Poppins', 'Playfair Display', serif;
+    margin-top: auto;
+}
+
+/* ==================== COLOR VARIABLES - RIM AUTO PARTS THEME ==================== */
+:root {
+    --rim-primary: #3c5f77;
+    --rim-primary-light: #4e7a96;
+    --rim-primary-dark: #2c4a5e;
+    --rim-accent: #c0bbaf;
+    --rim-accent-light: #d4cfc5;
+    --rim-accent-dark: #a69f91;
+    --rim-cream: #e8e4db;
+    --rim-cream-light: #f5f2ed;
+    --rim-cream-dark: #c0bbaf;
+    --rim-blue: #3A7BD5;
+    --rim-wa: #25D366;
+    --rim-navy: #1e3a4a;
+    --rim-navy-light: #2c4a5e;
+    --rim-text-dark: #2c4a5e;
+    --rim-text-light: #6b8ba3;
+    --white: #FFFFFF;
+    --gold: #c0bbaf;
+    --gold-light: #d4cfc5;
+    --transition: all 0.3s ease;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 2rem 2rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+}
+
+/* Logo Section */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 1rem;
+}
+
+.logo-icon {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.logo-icon img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.brand-tagline {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: var(--rim-accent);
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+.brand-description {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    opacity: 0.8;
+    margin-bottom: 1rem;
+}
+
+.trust-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.trust-badges span {
+    font-size: 0.7rem;
+    background: rgba(60, 95, 119, 0.15);
+    padding: 4px 12px;
+    border-radius: 50px;
+    border: 1px solid rgba(60, 95, 119, 0.3);
+}
+
+/* Footer Section Headings */
+.footer-section h3 {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 1.2rem;
+    position: relative;
+    display: inline-block;
+    font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
+}
+
+.footer-section h3::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--rim-primary);
+    border-radius: 2px;
+}
+
+/* Lists */
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: var(--rim-cream);
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: var(--transition);
+    opacity: 0.8;
+    display: inline-block;
+}
+
+.footer-section ul li a:hover {
+    opacity: 1;
+    color: var(--rim-accent);
+    transform: translateX(5px);
+}
+
+/* Contact Info */
+.contact-info li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.contact-icon {
+    font-size: 1rem;
+    min-width: 24px;
+}
+
+.contact-info li span:last-child {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    opacity: 0.8;
+}
+
+.contact-info li a {
+    color: var(--rim-cream);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.contact-info li a:hover {
+    color: var(--rim-accent);
+}
+
+/* WhatsApp Link Special */
+.contact-info li a[href*="wa.me"] {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.contact-info li a[href*="wa.me"]:hover {
+    color: var(--rim-wa);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    border-top: 1px solid rgba(232, 228, 219, 0.1);
+    padding: 1.5rem 2rem;
+    text-align: center;
+}
+
+.footer-bottom-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-bottom-content p {
+    font-size: 0.8rem;
+    opacity: 0.7;
+    margin: 5px 0;
+}
+
+.footer-tagline {
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+    color: var(--rim-accent);
+}
+
+/* ==================== SOCIAL MEDIA SECTION ==================== */
+
+/* Social Media Section in Footer */
+.footer-social-section {
+    margin-top: 25px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-social-section h4 {
+    font-size: 0.85rem;
+    color: var(--rim-cream);
+    opacity: 0.8;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.social-icons-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.social-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition);
+    text-decoration: none;
+    color: white;
+}
+
+/* Individual Social Icon Colors */
+.social-icon.whatsapp {
+    background: #25D366;
+}
+
+.social-icon.instagram {
+    background: linear-gradient(135deg, #833AB4, #E1306C, #F56040);
+}
+
+.social-icon.facebook {
+    background: #1877F2;
+}
+
+.social-icon.justdial {
+    background: #2D2E83;
+}
+
+.social-icon:hover {
+    transform: translateY(-3px) scale(1.05);
+    filter: brightness(1.1);
+}
+
+/* Footer Bottom Social Links */
+.footer-social-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.footer-social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--rim-cream);
+    text-decoration: none;
+    font-size: 0.75rem;
+    transition: var(--transition);
+    opacity: 0.8;
+    padding: 4px 8px;
+    border-radius: 20px;
+}
+
+.footer-social-link svg {
+    width: 14px;
+    height: 14px;
+}
+
+.footer-social-link:hover {
+    color: var(--rim-accent);
+    opacity: 1;
+    transform: translateY(-2px);
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+@media (max-width: 1024px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 3rem 1.5rem 2rem;
+    }
+    
+    .footer-section {
+        text-align: center;
+    }
+    
+    .footer-section h3::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-logo {
+        justify-content: center;
+    }
+    
+    .trust-badges {
+        justify-content: center;
+    }
+    
+    .contact-info li {
+        justify-content: center;
+    }
+    
+    .footer-bottom {
+        padding: 1.2rem 1rem;
+    }
+    
+    .social-icons-container {
+        justify-content: center;
+    }
+    
+    .footer-social-links {
+        gap: 12px;
+    }
+    
+    .footer-social-link {
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-container {
+        padding: 2rem 1rem 1.5rem;
+    }
+    
+    .brand-description {
+        font-size: 0.8rem;
+    }
+    
+    .trust-badges span {
+        font-size: 0.6rem;
+    }
+    
+    .footer-section h3 {
+        font-size: 1rem;
+    }
+    
+    .footer-bottom-content p {
+        font-size: 0.7rem;
+    }
+    
+    .social-icon {
+        width: 36px;
+        height: 36px;
+    }
+    
+    .footer-social-links {
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+}
