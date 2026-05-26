@@ -88,7 +88,7 @@ function LoadingScreen({ onLoad }) {
         <div className="logo-wrapper">
           <div className="loader-logo">
             <img 
-              src="https://i.postimg.cc/qByxbLtZ/images-removebg-preview.png" 
+              src="https://i.postimg.cc/05D4CNfX/95843812-5925-4d7a-ade8-fdd63b2df0dd-removebg-preview.png" 
               alt="RiM AUTO PARTS Logo" 
             />
           </div>

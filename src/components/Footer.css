@@ -382,3 +382,11 @@
         gap: 8px;
     }
 }
+
+
+.logo-icon p {
+    font-size: 1.8rem;
+    font-weight: 700;
+    font-family: 'arial', serif;
+    color: #ffffff;
+}

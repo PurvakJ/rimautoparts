@@ -62,6 +62,7 @@ function Contact() {
             <a href={`tel:${phoneNumber1}`} className="hero-call-btn">
               📞 Call: {phoneNumber1}
             </a>
+          
             <a href={whatsappLink} target="_blank" rel="noopener noreferrer" className="hero-wa-btn">
               💬 WhatsApp Us
             </a>
@@ -79,6 +80,7 @@ function Contact() {
               <p><strong>
                 <a href={`tel:${phoneNumber1}`}>{phoneNumber1}</a>
               </strong></p>
+            <p><a href="mailto:gnmsrim@gmail.com">gnmsrim@gmail.com</a></p>
               <small>Mon-Sat, 9 AM - 7 PM</small>
               <small>Sunday: Closed</small>
             </div>
@@ -113,7 +115,7 @@ function Contact() {
               <div className="benefits-list">
                 <h4>Why choose RiM AUTO PARTS:</h4>
                 <ul>
-                  <li>✓ OEM Standard Quality Products</li>
+                  <li>✓ ISO Standard Quality Products</li>
                   <li>✓ 1+ Year Warranty on Select Items*</li>
                   <li>✓ Competitive Bulk Pricing</li>
                   <li>✓ Pan India Shipping Available</li>
@@ -295,7 +297,7 @@ function Contact() {
             <div className="trust-item">
               <span className="trust-icon">🔧</span>
               <div>
-                <h4>OEM Standard Quality</h4>
+                <h4>ISO Standard Quality</h4>
                 <p>Premium auto components</p>
               </div>
             </div>

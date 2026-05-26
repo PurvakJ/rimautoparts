@@ -119,7 +119,7 @@ function About() {
               <div className="feature-icon">🌀</div>
               <h3>Premium Filters</h3>
               <p>High-flow air filters and oil filters for better engine performance and longevity.</p>
-              <div className="feature-tag">OEM Standard</div>
+              <div className="feature-tag">ISO Standard</div>
             </div>
 
             <div className="feature-box">

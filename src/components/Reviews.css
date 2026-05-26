@@ -1050,3 +1050,113 @@
         text-align: center;
     }
 }
+
+/* Update these styles in your Reviews.css file */
+
+/* ==================== STAR RATINGS - GOLDEN COLOR ==================== */
+
+/* For rating stars in stats section */
+.stars-display {
+    font-size: 1.2rem;
+    letter-spacing: 3px;
+    color: #FFD700; /* Golden color */
+    margin: 0.5rem 0;
+}
+
+/* For rating stars in review cards */
+.rating-stars {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    color: #FFD700; /* Golden color */
+}
+
+/* For rating stars in form - active state */
+.rating-star.active {
+    color: #FFD700; /* Golden color */
+}
+
+/* For rating stars hover state */
+.rating-star:hover {
+    transform: scale(1.1);
+    color: #FFD700; /* Golden color */
+}
+
+/* For rating stars default state */
+.rating-star {
+    background: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    padding: 4px;
+    color: #e0e0e0; /* Light gray for inactive stars */
+    transition: var(--transition);
+}
+
+/* For the average rating stars display */
+.average-rating + .stars-display {
+    color: #FFD700;
+}
+
+/* Featured ribbon star color */
+.featured-ribbon {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    background: linear-gradient(135deg, #FFD700, #FFA500); /* Golden gradient */
+    color: var(--rim-primary-dark);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    font-weight: 600;
+}
+
+/* Alternative golden colors for different elements */
+:root {
+    --star-gold: #FFD700;
+    --star-gold-dark: #FFC107;
+    --star-gold-light: #FFE44D;
+}
+
+/* For review cards rating stars */
+.review-card .rating-stars {
+    color: var(--star-gold);
+    letter-spacing: 3px;
+}
+
+/* For the rating distribution star labels */
+.distribution-bar .star-label {
+    color: var(--star-gold);
+}
+
+/* For any other star elements */
+.star-rating, 
+.rating-select .star,
+.rating-star.active,
+.rating-star.selected {
+    color: #FFD700 !important;
+}
+
+/* For the getRatingText star icon */
+.rating-help-text {
+    font-size: 0.8rem;
+    color: var(--rim-text-light);
+}
+
+/* Optional: Add a subtle glow to active stars */
+.rating-star.active {
+    color: #FFD700;
+    text-shadow: 0 0 5px rgba(255, 215, 0, 0.5);
+}
+
+/* For the average rating display - make stars golden */
+.stats-container .stars-display {
+    color: #FFD700;
+    font-size: 1.3rem;
+}
+
+/* For the no reviews section - any star icons */
+.no-reviews-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    color: var(--star-gold);
+}
